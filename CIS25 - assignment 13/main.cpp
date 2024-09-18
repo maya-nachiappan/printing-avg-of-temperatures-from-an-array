@@ -51,12 +51,12 @@ int main()
     
     if ( unit=='F')
     {
-        cout << "the average temperature is: " << average << " farenheit and" << celsius << "celsius"<< endl;
+        cout << "the average temperature is: " << average << " degrees farenheit and" << celsius << " degrees celsius"<< endl;
     }
     else if (unit=='C')
     {
-        cout << "the average temperature is " << average << " celsius and" << farenheit <<
-        "farenheit" << endl;
+        cout << "the average temperature is " << average << " degrees celsius and " << farenheit <<
+        " degrees farenheit" << endl;
     }
     else
     {
