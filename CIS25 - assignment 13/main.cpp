@@ -11,19 +11,36 @@ using namespace std;
 
 int main()
 {
-    double avgTemp;
-    double sumTemp=0;
-    int num;
+    int max; // maximum amount of temperatures that can be taken
+    double temperatures[max];
+    double sum=0.0;
+    int count=0;
+    double temp;
     
-    cout << "How many temperatures do you have: " << endl;
-    cin >> num;
+    // inputting the amount of temperatures
+    cout << "enter the amount of temperatures you have: " << endl;
+    cin >> max;
     
-    double temp[num];
-    cout << "Enter the temperatures: " << endl;
-    for (int i=0; i<num; i++)
+    for (int i=0; i<max; i++)
     {
-        getline(cin, temp[i]);
-        sumTemp=sumTemp+ temp[i];
+        cout << "enter temperature " << i <<":" << endl;
+        cin >> temp;
     }
-avgTemp= sumTemp
+    
+    temperatures[count] = temp;
+    sum += temp;
+    count++;
+
+        
+        
+  if (count>0)
+{
+    double average=sum/count;
+    cout << "the average temperature is: " << average << "degrees" << endl;
+}
+else
+{
+    cout << "no temperatures were entered" << endl;
+}
+return 0;
 }
