@@ -46,12 +46,12 @@ int main()
     double average=sum/max;
     
     // formulas
-    farenheit = (average*9/5)+32;
-    celsius = (average-32)*(5/9);
+    farenheit = (average*9.0/5.0)+32.0;
+    celsius = (average-32.0)*(5.0/9.0);
     
     if ( unit=='F')
     {
-        cout << "the average temperature is: " << average << " degrees farenheit and" << celsius << " degrees celsius"<< endl;
+        cout << "the average temperature is: " << average << " degrees farenheit and " << celsius << " degrees celsius"<< endl;
     }
     else if (unit=='C')
     {
