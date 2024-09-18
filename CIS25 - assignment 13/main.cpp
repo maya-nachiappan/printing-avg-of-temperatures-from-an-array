@@ -15,10 +15,16 @@ int main()
     double sum=0.0;
     int count=0;
     double temp;
+    double farenheit;
+    double celsius;
+    char unit;
+    
     
     // inputting the amount of temperatures
     cout << "enter the amount of temperatures you have: " << endl;
     cin >> max;
+    cout << "enter the unit, 'F' or 'C'" << endl;
+    cin >> unit;
     
     double temperatures[max];
     
@@ -33,11 +39,30 @@ int main()
         count++;
         
     }
+    
         
   if (count>0)
 {
     double average=sum/max;
-    cout << "the average temperature is: " << average << " degrees" << endl;
+    
+    // formulas
+    farenheit = (average*9/5)+32;
+    celsius = (average-32)*(5/9);
+    
+    if ( unit=='F')
+    {
+        cout << "the average temperature is: " << average << " farenheit and" << celsius << "celsius"<< endl;
+    }
+    else if (unit=='C')
+    {
+        cout << "the average temperature is " << average << " celsius and" << farenheit <<
+        "farenheit" << endl;
+    }
+    else
+    {
+        cout << "incorrect unit used" << endl;
+        return 1;
+    }
 }
 else
 {
