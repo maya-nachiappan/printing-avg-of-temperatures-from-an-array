@@ -12,7 +12,6 @@ using namespace std;
 int main()
 {
     int max; // maximum amount of temperatures that can be taken
-    double temperatures[max];
     double sum=0.0;
     int count=0;
     double temp;
@@ -21,22 +20,24 @@ int main()
     cout << "enter the amount of temperatures you have: " << endl;
     cin >> max;
     
+    double temperatures[max];
+    
     for (int i=0; i<max; i++)
     {
-        cout << "enter temperature " << i <<":" << endl;
+        cout << "enter temperature " << i+1 <<":" << endl;
         cin >> temp;
-    }
-    
-    temperatures[count] = temp;
-    sum += temp;
-    count++;
-
         
+        
+        temperatures[count] = temp;
+        sum += temp;
+        count++;
+        
+    }
         
   if (count>0)
 {
-    double average=sum/count;
-    cout << "the average temperature is: " << average << "degrees" << endl;
+    double average=sum/max;
+    cout << "the average temperature is: " << average << " degrees" << endl;
 }
 else
 {
