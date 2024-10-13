@@ -1,0 +1,1 @@
+This is a program to take temperatures from a user, store them in an array and print the average. The program uses for loop and a nested if loop, and also converts farenheit to celsius and vice versa.
